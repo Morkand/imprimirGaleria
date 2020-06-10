@@ -1,15 +1,10 @@
 export interface Consignacion {
-  'fecha'?: string;
-  'razon_social'?: string;
-  'direccion'?: string;
-  'pedido_numero'?: number;
-  'tipo_factura'?: number;// 1 contado o 2 credito
-  'ruc'?: string;
-  'tel'?: string;
+  'recibi'?: string;
+  'efectos'?: string;
   'codigo'?: string[];
   'unidad'?: string[];
   'descripcion'?: string[];
-  'precio_unitario'?: number[];
+  'precio_unitario'?: string[];
   'exentas'?: number[];
   'iva_5'?: number[];
   'iva_10'?: number[];

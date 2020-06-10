@@ -1,1 +1,130 @@
-<p>factura works!</p>
+<div id="print-section">
+  <div class="infoFactura">
+    <div *ngIf="facturacion.tipo_factura" class="xcontado1">x</div>
+    <div *ngIf="!facturacion.tipo_factura" class="xcredito1">x</div>
+    <b class="fecha1">{{facturacion.fecha}}</b>
+    <b class="razon1">{{facturacion.razon_social}}</b>
+    <b class="direccion1">{{facturacion.direccion}}</b>
+    <b class="numero_pedido1">{{facturacion.pedido_numero}}</b>
+    <b class="ruc1">{{facturacion.ruc}}</b>
+    <b class="tel1">{{facturacion.tel}}</b>
+  </div>
+  <div class="contenidoFactura">
+    <b class="codigo1">
+      <p *ngFor="let c of facturacion.codigo">{{c}}</p>
+    </b>
+    <b class="unidad1">
+      <p *ngFor="let u of facturacion.unidad">{{u}}</p>
+    </b>
+    <b class="descripcion1">
+      <p *ngFor="let d of facturacion.descripcion">{{d}}</p>
+    </b>
+    <b class="precio_unitario1">
+      <p *ngFor="let pu of facturacion.precio_unitario">{{pu}}</p>
+    </b>
+    <b class="excentas1">
+      <p *ngFor="let e of facturacion.exentas">{{e}}</p>
+    </b>
+    <b class="iva_5">
+      <p *ngFor="let i5 of facturacion.iva_5">{{i5}}</p>
+    </b>
+    <b class="iva_10">
+      <p *ngFor="let i10 of facturacion.iva_10">{{i10}}</p>
+    </b>
+  </div>
+  <div class="pieFactura">
+    <b class="total_a_pagar1"> {{facturacion.total_a_pagar}} </b>
+    <b class="total_a_pagar_letras1">{{letras.NumeroALetras(facturacion.total_a_pagar)}}</b>
+    <b class="iva_5_total">{{facturacion.liquidacion_5}}</b>
+    <b class="iva_10_total">{{facturacion.liquidacion_10}}</b>
+    <b class="iva_total">{{facturacion.total_liquidacion}}</b>
+    <b class="documento">{{facturacion.documento}}</b>
+  </div>
+  <div class="duplicado">
+    <div class="infoFactura2">
+      <div *ngIf="facturacion.tipo_factura" class="xcontado1">x</div>
+      <div *ngIf="!facturacion.tipo_factura" class="xcredito1">x</div>
+      <b class="fecha1">{{facturacion.fecha}}</b>
+      <b class="razon1">{{facturacion.razon_social}}</b>
+      <b class="direccion1">{{facturacion.direccion}}</b>
+      <b class="numero_pedido1">{{facturacion.pedido_numero}}</b>
+      <b class="ruc1">{{facturacion.ruc}}</b>
+      <b class="tel1">{{facturacion.tel}}</b>
+    </div>
+    <div class="contenidoFactura2">
+      <b class="codigo1">
+        <p *ngFor="let c of facturacion.codigo">{{c}}</p>
+      </b>
+      <b class="unidad1">
+        <p *ngFor="let u of facturacion.unidad">{{u}}</p>
+      </b>
+      <b class="descripcion1">
+        <p *ngFor="let d of facturacion.descripcion">{{d}}</p>
+      </b>
+      <b class="precio_unitario1">
+        <p *ngFor="let pu of facturacion.precio_unitario">{{pu}}</p>
+      </b>
+      <b class="excentas1">
+        <p *ngFor="let e of facturacion.exentas">{{e}}</p>
+      </b>
+      <b class="iva_5">
+        <p *ngFor="let i5 of facturacion.iva_5">{{i5}}</p>
+      </b>
+      <b class="iva_10">
+        <p *ngFor="let i10 of facturacion.iva_10">{{i10}}</p>
+      </b>
+    </div>
+    <div class="pieFactura2">
+      <b class="total_a_pagar1"> {{facturacion.total_a_pagar}} </b>
+      <b class="total_a_pagar_letras1">{{letras.NumeroALetras(facturacion.total_a_pagar)}}</b>
+      <b class="iva_5_total">{{facturacion.liquidacion_5}}</b>
+      <b class="iva_10_total">{{facturacion.liquidacion_10}}</b>
+      <b class="iva_total">{{facturacion.total_liquidacion}}</b>
+      <b class="documento">{{facturacion.documento}}</b>
+    </div>
+  </div>
+  <div class="triplicado">
+    <div class="infoFactura3">
+      <div *ngIf="facturacion.tipo_factura" class="xcontado1">x</div>
+      <div *ngIf="!facturacion.tipo_factura" class="xcredito1">x</div>
+      <b class="fecha1">{{facturacion.fecha}}</b>
+      <b class="razon1">{{facturacion.razon_social}}</b>
+      <b class="direccion1">{{facturacion.direccion}}</b>
+      <b class="numero_pedido1">{{facturacion.pedido_numero}}</b>
+      <b class="ruc1">{{facturacion.ruc}}</b>
+      <b class="tel1">{{facturacion.tel}}</b>
+    </div>
+    <div class="contenidoFactura3">
+      <b class="codigo1">
+        <p *ngFor="let c of facturacion.codigo">{{c}}</p>
+      </b>
+      <b class="unidad1">
+        <p *ngFor="let u of facturacion.unidad">{{u}}</p>
+      </b>
+      <b class="descripcion1">
+        <p *ngFor="let d of facturacion.descripcion">{{d}}</p>
+      </b>
+      <b class="precio_unitario1">
+        <p *ngFor="let pu of facturacion.precio_unitario">{{pu}}</p>
+      </b>
+      <b class="excentas1">
+        <p *ngFor="let e of facturacion.exentas">{{e}}</p>
+      </b>
+      <b class="iva_5">
+        <p *ngFor="let i5 of facturacion.iva_5">{{i5}}</p>
+      </b>
+      <b class="iva_10">
+        <p *ngFor="let i10 of facturacion.iva_10">{{i10}}</p>
+      </b>
+    </div>
+    <div class="pieFactura3">
+      <b class="total_a_pagar1"> {{facturacion.total_a_pagar}} </b>
+      <b class="total_a_pagar_letras1">{{letras.NumeroALetras(facturacion.total_a_pagar)}}</b>
+      <b class="iva_5_total">{{facturacion.liquidacion_5}}</b>
+      <b class="iva_10_total">{{facturacion.liquidacion_10}}</b>
+      <b class="iva_total">{{facturacion.total_liquidacion}}</b>
+      <b class="documento">{{facturacion.documento}}</b>
+    </div>
+  </div>
+</div>
+<button (click)="print()">Imprimir factura</button>
