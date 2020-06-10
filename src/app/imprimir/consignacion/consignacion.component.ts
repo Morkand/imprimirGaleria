@@ -10,7 +10,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ConsignacionComponent implements OnInit {
 
   @Input()
-  consignacion: Consignacion;
+  consignacion: Consignacion = {};
+
   constructor(public letras: NumeroLetrasService) { }
 
   ngOnInit(): void {
@@ -18,164 +19,93 @@ export class ConsignacionComponent implements OnInit {
 
   print(): void {
     let printContents, popupWin;
-    printContents = document.getElementById('print-section').innerHTML;
+    printContents = document.getElementById('print-section-MUI').innerHTML;
     popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
     popupWin.document.open();
     popupWin.document.write(`
       <html>
         <body onload="window.print();window.close()">${printContents}</body>
         <style>
-        .factura {
-          position: relative;
-          transform: rotate(180deg);
-        }
-        .xcontado1 {
+        .recibi1 {
           position: absolute;
-          top: 36px;
-          left: 546px;
-        }
-        .xcredito1 {
-          position: absolute;
-          top: 36px;
-          left: 602px;
-        }
-        .fecha1 {
-          position: absolute;
-          top: 37.5px;
-          left: 300px;
+          top: 93px;
+          left: 205px;
           font-size: 10px;
         }
-        .razon1 {
+        .efectos1 {
           position: absolute;
-          top: 53px;
-          left: 320px;
+          top: 93px;
+          left: 550px;
           font-size: 10px;
-        }
-        .direccion1 {
-          position: absolute;
-          top: 73px;
-          left: 307px;
-          font-size: 9px;
-        }
-        .numero_pedido1 {
-          position: absolute;
-          top: 91px;
-          left: 308px;
-          font-size: 9px;
-        }
-        .razon1 {
-          position: absolute;
-          top: 56px;
-          left: 320px;
-          font-size: 9px;
-        }
-        .ruc1 {
-          position: absolute;
-          top: 71px;
-          left: 529px;
-          font-size: 9px;
-        }
-        .tel1 {
-          position: absolute;
-          top: 88px;
-          left: 548px;
-          font-size: 9px;
         }
         .codigo1 {
           position: absolute;
-          top: 140px;
-          left: 80px;
+          top: 141px;
+          left: 77px;
           font-size: 9px;
         }
-        .unidad1 {
+        .dimensiones1 {
           position: absolute;
-          top: 140px;
-          left: 150px;
+          top: 141px;
+          left: 515px;
+          font-size: 9px;
+        }
+        .precio1 {
+          position: absolute;
+          top: 141px;
+          left: 600px;
           font-size: 9px;
         }
         .descripcion1 {
           position: absolute;
-          top: 140px;
-          left: 260px;
+          top: 141px;
+          left: 200px;
           font-size: 9px;
         }
         .excentas1 {
           position: absolute;
-          top: 140px;
+          top: 141px;
           left: 572px;
           font-size: 9px;
         }
-        .precio_unitario1 {
+        .observaciones1 {
           position: absolute;
-          top: 140px;
-          left: 512px;
+          top: 141px;
+          left: 705px;
           font-size: 9px;
         }
-        .iva_5 {
+        .dia {
           position: absolute;
-          top: 140px;
-          left: 643px;
+          top: 373px;
+          left: 626px;
           font-size: 9px;
         }
-        .iva_10 {
+        .mes {
           position: absolute;
-          top: 140px;
-          left: 727px;
+          top: 373px;
+          left: 669px;
           font-size: 9px;
         }
-        .total_a_pagar1 {
+        .anho {
           position: absolute;
-          top: 298px;
-          left: 722px;
+          top: 373px;
+          left: 765px;
           font-size: 9px;
         }
-        .total_a_pagar_letras1 {
-          position: absolute;
-          top: 298px;
-          left: 230px;
-          font-size: 9px;
-        }
-        .iva_5_total {
-          position: absolute;
-          top: 318px;
-          left: 180px;
-          font-size: 9px;
-        }
-        .iva_10_total {
-          position: absolute;
-          top: 318px;
-          left: 329px;
-          font-size: 9px;
-        }
-        .iva_total {
-          position: absolute;
-          top: 318px;
-          left: 722px;
-          font-size: 9px;
-        }
-        .documento {
-          position: absolute;
-          top: 355px;
-          left: 700px;
-          font-size: 14px;
-        }
-
         .duplicado {
           position: absolute;
+          top: 427px;
           width: 800px;
-          top: 426px;
         }
         .triplicado {
           position: absolute;
+          top: 856px;
           width: 800px;
-          top: 858px;
         }
         body {
           width: 812.5984252px;
           height: 1247.2440945px;
         }
-
-
         </style>
       </html>`
     );

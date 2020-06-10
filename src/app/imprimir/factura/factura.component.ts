@@ -1,3 +1,4 @@
+import { Consignacion } from './../../interfaces/consignacion';
 import { NumeroLetrasService } from './../../servicios/numero-letras.service';
 import { Factura } from './../../interfaces/factura';
 import { Component, OnInit, Input } from '@angular/core';
@@ -18,17 +19,13 @@ export class FacturaComponent implements OnInit {
 
   print(): void {
     let printContents, popupWin;
-    printContents = document.getElementById('print-section').innerHTML;
+    printContents = document.getElementById('print-section-FACTURA').innerHTML;
     popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
     popupWin.document.open();
     popupWin.document.write(`
       <html>
         <body onload="window.print();window.close()">${printContents}</body>
         <style>
-        .factura {
-          position: relative;
-          transform: rotate(180deg);
-        }
         .xcontado1 {
           position: absolute;
           top: 36px;

@@ -1,3 +1,4 @@
+import { Consignacion } from './interfaces/consignacion';
 import { Factura } from './interfaces/factura';
 import { Component, OnInit } from '@angular/core';
 
@@ -29,6 +30,8 @@ export class AppComponent implements OnInit {
     total_liquidacion: 0,
     documento: '3438738'
   };
+  consignacion: Consignacion = {};
+
   ngOnInit(): void {
     this.factura.total_a_pagar = this.factura.total_a_pagar + this.suma(this.factura.precio_unitario);
     this.factura.liquidacion_5 = this.factura.liquidacion_5 + this.suma(this.factura.iva_5);
