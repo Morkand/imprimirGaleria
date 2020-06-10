@@ -4,7 +4,7 @@ export interface Factura {
   'razon_social'?: string;
   'direccion'?: string;
   'pedido_numero'?: number;
-  'tipo_factura'?: boolean;// 1 contado o 2 credito
+  'tipo_factura'?: boolean; // true para contado false para credito
   'ruc'?: string;
   'tel'?: string;
   'codigo'?: string[];
