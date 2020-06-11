@@ -5,8 +5,8 @@ export interface Consignacion {
   'dimensiones'?: string[];
   'descripcion'?: string[];
   'precio'?: number[];
-  'observaciones'?: number[];
+  'observaciones'?: string[];
   'anho'?: number;
-  'mes'?: number;
+  'mes'?: string;
   'dia'?: number;
 }

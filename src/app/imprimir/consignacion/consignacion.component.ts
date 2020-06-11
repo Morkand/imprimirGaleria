@@ -77,7 +77,7 @@ export class ConsignacionComponent implements OnInit {
         .dia {
           position: absolute;
           top: 373px;
-          left: 626px;
+          left: 629px;
           font-size: 9px;
         }
         .mes {
@@ -89,7 +89,7 @@ export class ConsignacionComponent implements OnInit {
         .anho {
           position: absolute;
           top: 373px;
-          left: 765px;
+          left: 769px;
           font-size: 9px;
         }
         .duplicado {

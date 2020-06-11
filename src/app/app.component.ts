@@ -30,7 +30,18 @@ export class AppComponent implements OnInit {
     total_liquidacion: 0,
     documento: '3438738'
   };
-  consignacion: Consignacion = {};
+  consignacion: Consignacion = {
+    recibi: 'Me llego por que si',
+    efectos: 'El efecto de tu corazon',
+    codigo: ['1254', '255', '15', '421'],
+    descripcion: ['descripcion 1', 'descripcion 2', 'descripcion 3', 'descripcion 4'],
+    dimensiones: ['22x2', '3x3', '4x6', '6x44'],
+    precio: [123254, 4552556, 565666, 565659],
+    observaciones: ['asdasdas', 'asdasdasd', 'asdasdas', 'asdasdasd'],
+    dia: 7,
+    mes: 'diciembre',
+    anho: 1991
+  };
 
   ngOnInit(): void {
     this.factura.total_a_pagar = this.factura.total_a_pagar + this.suma(this.factura.precio_unitario);
